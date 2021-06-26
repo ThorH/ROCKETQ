@@ -29,8 +29,8 @@
                     <img src="/images/logo.svg" alt="Rocket.Q Logo"/>
                 </a>
                 <div class="buttons">
-                    <div class="button outlined" id="room-id" data-id="323243">
-                        #323243
+                    <div class="button outlined" id="room-id" data-id="<%= roomId %>">
+                        #<%= roomId %>
                         <img src="/images/copy.svg" alt="Copiar numero da sala"/>
                     </div>
                     <a href="#" class="button"> 
@@ -42,7 +42,7 @@
             <main>
                 <section id="question-form">
                     <h2>Faça sua pergunta</h2>
-                    <form action="">
+                    <form action="/question/create/<%= roomId %>" method="POST">
                         <label class="sr-only" for-id="question">O que voce quer perguntar?</label>
                         <textarea name="question" id="question" placeholder="O que voce quer perguntar?"></textarea>
                         <footer>
@@ -58,6 +58,8 @@
                 <section id="questions">
                     <h2 class="sr-only">Perguntas da comunidade</h2>
                     <div class="questions">
+
+                        <!-- fazer um script e joga as perguntas para pasta parts para aparecerem caso haja alguma pergunta-->
 
                         <div class="question-wrapper">
                             <div class="question-content">
